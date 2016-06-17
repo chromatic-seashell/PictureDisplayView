@@ -28,6 +28,7 @@
 		18E390861D13E1490030F9E3 /* SmallCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E3907F1D13E1490030F9E3 /* SmallCollectionViewCell.xib */; };
 		18E390871D13E1490030F9E3 /* SmallCollectionViewDD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E390811D13E1490030F9E3 /* SmallCollectionViewDD.m */; };
 		18E390881D13E1490030F9E3 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E390831D13E1490030F9E3 /* UIImage+Tool.m */; };
+		18E390CB1D13FEF50030F9E3 /* PictureDisplayView演示2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 18E390CA1D13FEF50030F9E3 /* PictureDisplayView演示2.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		18E390811D13E1490030F9E3 /* SmallCollectionViewDD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SmallCollectionViewDD.m; sourceTree = "<group>"; };
 		18E390821D13E1490030F9E3 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
 		18E390831D13E1490030F9E3 /* UIImage+Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Tool.m"; sourceTree = "<group>"; };
+		18E390CA1D13FEF50030F9E3 /* PictureDisplayView演示2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "PictureDisplayView演示2.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 		18AE14881D12D719008B36B6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18E390CA1D13FEF50030F9E3 /* PictureDisplayView演示2.gif */,
 				18AE14891D12D719008B36B6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -313,6 +316,7 @@
 				18E390681D1393560030F9E3 /* 04.jpg in Resources */,
 				18E390651D1393560030F9E3 /* 01.jpg in Resources */,
 				18AE14931D12D719008B36B6 /* Main.storyboard in Resources */,
+				18E390CB1D13FEF50030F9E3 /* PictureDisplayView演示2.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
