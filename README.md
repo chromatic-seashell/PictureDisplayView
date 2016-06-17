@@ -3,4 +3,4 @@
 
 ##demo
 
-![PictureDisplayView demo](https://github.com/chromatic-seashell/PictureDisplayView/blob/master/PicturesDisplayView(上下各一个collectionView展示图片)/PicturesDisplayView/PictureDisplayView演示.gif)
+![PictureDisplayView demo](https://github.com/chromatic-seashell/PictureDisplayView/blob/master/PicturesDisplayView(上下各一个collectionView展示图片)/PicturesDisplayView/PictureDisplayView演示2.gif)
