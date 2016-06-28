@@ -32,10 +32,20 @@
     
     //2.创建控件
     CGFloat width = self.view.frame.size.width;
-    PictureDisplayView *pictureDisplayView = [[PictureDisplayView  alloc]  initWithFrame:CGRectMake(0, 100, width, 400)];
-    //赋值数据
-    pictureDisplayView.pictures = self.pictures;
+    PictureDisplayView *pictureDisplayView = [[PictureDisplayView  alloc]  initWithFrame:CGRectMake(0, 0, width, 300)];
     [self.view  addSubview:pictureDisplayView];
+    
+    //2.1赋值数据
+    pictureDisplayView.pictures = self.pictures;
+    
+    //2.2 VFL添加约束
+    pictureDisplayView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSArray *constrsH = [NSLayoutConstraint  constraintsWithVisualFormat:@"H:|-0-[pictureDisplayView]-0-|" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(pictureDisplayView)];
+    [self.view  addConstraints:constrsH];
+    
+    NSArray *constrsV = [NSLayoutConstraint  constraintsWithVisualFormat:@"V:|-0-[pictureDisplayView(300)]" options:kNilOptions metrics:nil views:NSDictionaryOfVariableBindings(pictureDisplayView)];
+    [self.view  addConstraints:constrsV];
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -49,7 +49,7 @@ static NSString * smallCellID = @"smallCell";
         self.bigPictureCollectionView = bigPictureCollectionView;
         self.bigPictureCollectionView.dataSource = self;
         self.bigPictureCollectionView.delegate = self;
-        self.bigPictureCollectionView.backgroundColor = [UIColor redColor];
+        //self.bigPictureCollectionView.backgroundColor = [UIColor redColor];
         //不可滚动
         self.bigPictureCollectionView.scrollEnabled = NO;
     }
@@ -64,7 +64,7 @@ static NSString * smallCellID = @"smallCell";
         self.SmallCollectionViewDD  = [[SmallCollectionViewDD  alloc]  init];
         self.smallPictureCollectionView.dataSource = self.SmallCollectionViewDD ;
         self.smallPictureCollectionView.delegate = self.SmallCollectionViewDD ;
-        self.smallPictureCollectionView.backgroundColor = [UIColor  whiteColor];
+        self.smallPictureCollectionView.backgroundColor = [UIColor  grayColor];
         self.smallPictureCollectionView.showsHorizontalScrollIndicator = NO;
     }
     return _smallPictureCollectionView;
@@ -109,6 +109,24 @@ static NSString * smallCellID = @"smallCell";
     }
     return self;
 }
+#pragma mark 布局子控件
+- (void)layoutSubviews{
+    
+    [super  layoutSubviews];
+    //NSLog(@"%@--%s",NSStringFromCGRect(self.frame),__func__);
+    
+    //1布局控件
+    self.bigPictureCollectionView.frame = [self  bigCollectionViewRect];
+    self.smallPictureCollectionView.frame = [self  smallCollectionViewRect];
+    
+    //2.调整collectionView布局的itemSize.
+    self.bigPictureFlowLayout.itemSize =[self  bigCollectionViewRect].size;
+    CGRect smallPictureGect = [self  smallCollectionViewRect];
+    CGFloat height = smallPictureGect.size.height;
+    _smallPictureFlowLayout.itemSize = CGSizeMake(height, height);
+    
+}
+
 
 #pragma mark  监听smallCollectionView点击的方法
 - (void)smallCollectionViewClick:(NSNotification *)notification{
@@ -131,6 +149,7 @@ static NSString * smallCellID = @"smallCell";
     [self.smallPictureCollectionView registerNib:[UINib  nibWithNibName:NSStringFromClass([SmallCollectionViewCell  class]) bundle:nil] forCellWithReuseIdentifier:smallCellID];
 
 }
+#pragma mark 计算相关尺寸
 - (CGRect)bigCollectionViewRect{
     
     CGFloat width = self.frame.size.width;
@@ -148,6 +167,7 @@ static NSString * smallCellID = @"smallCell";
     return smallRect;
 }
 
+#pragma mark 根据原始图片,获取大,小控件对应图片数据.
 - (NSArray *)smallpictureFromArray:(NSArray *)pictures{
 
     NSMutableArray *smallPictures = [NSMutableArray arrayWithCapacity:pictures.count];
